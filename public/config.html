@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuración del Intercom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Configuración del Intercom</h1>
+        <button id="btn-principal" class="config-btn" title="Volver a principal">&#8592;</button>
+    </div>
+    <div class="config-panel">
+        <form id="form-config" autocomplete="off">
+            <fieldset>
+                <legend>General</legend>
+                <label>Nombre del Intercom:
+                    <input type="text" maxlength="20" id="intercom_name">
+                </label>
+                <label>Clave de configuración:
+                    <input type="password" maxlength="32" id="config_key" value="1234">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Botones usuarios</legend>
+                <div id="lista-botones" class="lista-botones"></div>
+            </fieldset>
+            <button type="submit" id="btn-guardar" class="config-btn">Guardar cambios</button>
+        </form>
+        <div id="mensaje-status" style="margin:16px 0;color:green;"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>
